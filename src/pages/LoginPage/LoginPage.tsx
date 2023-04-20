@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Authorization } from "@utils/network";
+
 import { Box, Button, TextField, Typography } from "@mui/material";
 import styled from "styled-components";
-import { SubmitHandler, useForm } from "react-hook-form";
 
 const StyledMain = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 `;
 
 const StyledBox = styled(Box)`
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,18 +47,17 @@ type FormValues = {
 };
 
 const LoginPage: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { isSubmitSuccessful },
-  } = useForm<FormValues>();
-  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
+  const [error, setError] = useState<boolean>(false);
+  const { register, handleSubmit } = useForm<FormValues>();
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    Authorization(data).then((data) => {
+      if (!Object.values(data || {}).length) {
+        return setError(true);
+      }
+      console.log(data);
+    });
+  };
 
-  // useEffect(() => {
-  //   if(isSubmitSuccessful) {
-  //
-  //   }
-  // }, [])
   return (
     <StyledMain>
       <StyledBox>
@@ -74,9 +75,7 @@ const LoginPage: React.FC = () => {
             {...register("password")}
             type="password"
           />
-          {/*ПРОВЕРКА ОТВЕТА С СЕРВЕРА*/}
-          {/*<ErrorText color="red">Неверно введены данные!</ErrorText>*/}
-
+          {error && <ErrorText color="red">Неверно введены данные!</ErrorText>}
           <StyledButton type="submit" variant="contained">
             Войти
           </StyledButton>

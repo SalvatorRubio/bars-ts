@@ -8,7 +8,10 @@ module.exports = function override(config) {
     "@components": "src/components",
     "@hooks": "src/hooks",
     "@routes": "src/routes",
-    "@types": "src/types",
+    "@type": "src/type",
+    "@axios": "src/AxiosSetup",
+    "@hoc": "src/hoc",
+    "@UI": "src/UI",
   })(config);
 
   return config;

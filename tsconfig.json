@@ -26,8 +26,11 @@
       "@constants/*": ["./src/constants/*"],
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@hoc/*": ["./src/hoc/*"],
+      "@type/*": ["./src/type/*"],
       "@routes/*": ["./src/routes/*"],
-      "@types/*": ["./src/types/*"]
+      "@axios": ["./src/AxiosSetup"],
+      "@UI/*": ["./src/UI/*"]
     }
   },
   "include": [

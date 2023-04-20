@@ -15,7 +15,7 @@ const StyledToolbar = styled(Toolbar)`
 
 const Header: React.FC = () => {
   return (
-    <AppBar color="primary">
+    <AppBar position="static" color="primary">
       <StyledToolbar>
         <HeaderLogo />
         <HeaderInfo />

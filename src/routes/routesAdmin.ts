@@ -1,8 +1,4 @@
 import React from "react";
-
-type Routes = {
-  path: string;
-  component: React.FC;
-};
+import { Routes } from "@type/types";
 
 export const routesAdmin: Routes[] = [];
