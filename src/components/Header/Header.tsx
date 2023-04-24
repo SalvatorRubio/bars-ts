@@ -9,6 +9,7 @@ const StyledToolbar = styled(Toolbar)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0 20px;
   height: 70px;
 `;

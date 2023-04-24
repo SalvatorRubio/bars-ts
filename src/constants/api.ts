@@ -3,6 +3,7 @@ const HTTP = "http://";
 const ROOT_LINK = HTTP + "journal/php/queries/";
 
 const ROOT_LINK_TEACHER = ROOT_LINK + "teacher/";
+const ROOT_LINK_STUDENT = ROOT_LINK + "student/";
 
 export const ROOT_LINK_AUTHORIZATION = ROOT_LINK + "authorization.php";
 
@@ -19,3 +20,7 @@ export const GET_ABSOLUTE_KNOWLEDGE =
   ROOT_LINK_TEACHER + "selectAbsoluteKnowledge.php";
 export const GET_QUALITY_KNOWLEDGE =
   ROOT_LINK_TEACHER + "selectQualityKnowledge.php";
+
+// СТУДЕНТ -------------------------------------------------------
+
+export const GET_SCHEDULE = ROOT_LINK_STUDENT + "selectShedule.php";

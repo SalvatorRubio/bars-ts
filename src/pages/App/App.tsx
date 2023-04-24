@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import styled from "styled-components";
 import LoginPage from "@pages/LoginPage";
 import { routesTeacher } from "@routes/routesTeacher";
+import StudentPage from "@pages/StudentPage/StudentPage";
 
 const StyledBox = styled(Box)`
   height: 100vh;
@@ -29,6 +30,7 @@ function App() {
             />
           );
         })}
+        <Route path="/student" element={<StudentPage />} />
       </Routes>
     </StyledBox>
   );

@@ -77,3 +77,16 @@ export type TypeQualityKnowledge = {
 export type TypeAbsoluteKnowledge = {
   absolute: number;
 };
+
+export type TypeScheduleTommorow = {
+  cur_date: string;
+  discipline: string;
+  father_name: string;
+  full: string;
+  lesson_type: string;
+  name: string;
+  number: number;
+  number_pair: number;
+  shedule_id: number;
+  surname: number;
+};
