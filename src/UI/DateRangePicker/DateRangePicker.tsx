@@ -24,11 +24,11 @@ const DateRangePicker: React.FC<TypeDateRange> = ({
   endDate,
 }) => {
   const changeStartDate = (value: Dayjs | null) => {
-    setStartDate(value);
+    setStartDate!(value);
     localStorage.setItem("startDate", value!.toString());
   };
   const changeEndDate = (value: Dayjs | null) => {
-    setEndDate(value);
+    setEndDate!(value);
     localStorage.setItem("endDate", value!.toString());
   };
   return (
