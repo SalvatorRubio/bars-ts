@@ -24,3 +24,8 @@ export const GET_QUALITY_KNOWLEDGE =
 // СТУДЕНТ -------------------------------------------------------
 
 export const GET_SCHEDULE = ROOT_LINK_STUDENT + "selectShedule.php";
+export const GET_DATES_STUDENT = ROOT_LINK_STUDENT + "selectDates.php";
+export const GET_DISCIPLINES_STUDENT =
+  ROOT_LINK_STUDENT + "selectDisciplines.php";
+export const GET_MARKS_STUDENT = ROOT_LINK_STUDENT + "selectMarks.php";
+export const GET_MIDDILE_MARKS = ROOT_LINK_STUDENT + "selectMiddleMarks.php";

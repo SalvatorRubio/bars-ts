@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import TabPanel from "@components/StudentPage/TabPanel";
-import Schedule from "@components/StudentPage/Schedule";
+import TabSchedule from "@components/StudentPage/TabSchedule";
 import styled from "styled-components";
+import TabMarks from "@components/StudentPage/TabMarks";
 
 const StyledBox = styled(Box)`
   height: 100%;
@@ -42,7 +43,10 @@ const StudentPage: React.FC = () => {
         </Tabs>
       </ContainerTabs>
       <TabPanel index={0} value={value}>
-        <Schedule />
+        <TabSchedule />
+      </TabPanel>
+      <TabPanel index={1} value={value}>
+        <TabMarks />
       </TabPanel>
     </StyledBox>
   );

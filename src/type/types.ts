@@ -36,8 +36,8 @@ export type TypeLessonType = {
 export type TypeDateRange = {
   startDate: Dayjs | null;
   endDate: Dayjs | null;
-  setStartDate: React.Dispatch<React.SetStateAction<Dayjs | null>>;
-  setEndDate: React.Dispatch<React.SetStateAction<Dayjs | null>>;
+  setStartDate?: React.Dispatch<React.SetStateAction<Dayjs | null>>;
+  setEndDate?: React.Dispatch<React.SetStateAction<Dayjs | null>>;
 };
 
 // Для передачи пропсов для таблицы в TeacherPage
@@ -89,4 +89,25 @@ export type TypeScheduleTommorow = {
   number_pair: number;
   shedule_id: number;
   surname: number;
+};
+
+export type TypeDatesStudent = {
+  id: number;
+  cur_date: string;
+};
+
+export type TypeDisciplinesStudent = {
+  discipline_id: number;
+  name: string;
+};
+
+export type TypeMarksStudent = {
+  id: number;
+  mark: string;
+  cur_date: string;
+};
+
+export type TypeMiddleMarksStudent = {
+  name: string;
+  mark: number;
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ListGroups from "@components/TeacherPage/ListGroups";
 import ListDisciplines from "@components/TeacherPage/ListDisciplines";
-import DateRangePicker from "@components/TeacherPage/DateRangePicker/DateRangePicker";
+import DateRangePicker from "@UI/DateRangePicker/DateRangePicker";
 import TableMarks from "@components/TeacherPage/TableMarks";
 import { useAuth } from "@hooks/useAuth";
 import { Box, SelectChangeEvent } from "@mui/material";
