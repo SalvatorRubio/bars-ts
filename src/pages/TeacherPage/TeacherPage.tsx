@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ListGroups from "@components/TeacherPage/ListGroups";
+import ListGroups from "@UI/ListGroups";
 import ListDisciplines from "@components/TeacherPage/ListDisciplines";
 import DateRangePicker from "@UI/DateRangePicker/DateRangePicker";
 import TableMarks from "@components/TeacherPage/TableMarks";
@@ -25,7 +25,7 @@ const StyledBoxHeader = styled(Box)`
 `;
 
 const TeacherPage: React.FC = () => {
-  const { setGroup } = useAuth();
+  const { group, setGroup } = useAuth();
   const [discipline, setDiscipline] = useState<number>(0);
   const [startDate, setStartDate] = useState<Dayjs | null>(
     localStorage.getItem("startDate")
@@ -40,6 +40,7 @@ const TeacherPage: React.FC = () => {
   const [lessonType, setLessonType] = useState<string[]>([]);
   const handleChangeGroup = (event: SelectChangeEvent<number>) => {
     setGroup(event.target.value as number);
+    localStorage.setItem("group", JSON.stringify(group));
     setDiscipline(0);
   };
 

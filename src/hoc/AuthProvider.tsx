@@ -31,14 +31,12 @@ export const AuthProvider: React.FC<props> = ({ children }) => {
     localStorage.getItem("username")
   );
   const [role, setRole] = useState<number | null>(
-    Number(localStorage.getItem("role"))
+    Number(JSON.parse(localStorage.getItem("role")!))
   );
   const [id, setId] = useState<number | null>(
-    Number(localStorage.getItem("id"))
+    Number(JSON.parse(localStorage.getItem("id")!))
   );
-  const [group, setGroup] = useState<number | null>(
-    Number(localStorage.getItem("group"))
-  );
+  const [group, setGroup] = useState<number | null>(0);
 
   const signin = (
     username: string,

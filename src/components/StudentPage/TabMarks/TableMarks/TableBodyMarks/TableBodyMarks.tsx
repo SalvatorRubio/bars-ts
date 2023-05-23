@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   TypeDateRange,
   TypeDatesStudent,
-  TypeDisciplinesStudent,
+  TypeDisciplines,
   TypeMarksStudent,
   TypeMiddleMarksStudent,
 } from "@type/types";
@@ -22,7 +22,7 @@ type TypeMarks = {
 
 const TableBodyMarks: React.FC<TypeDateRange> = ({ startDate, endDate }) => {
   const { group, id } = useAuth();
-  const [disciplines, setDisciplines] = useState<TypeDisciplinesStudent[]>([]);
+  const [disciplines, setDisciplines] = useState<TypeDisciplines[]>([]);
   const [dates, setDates] = useState<TypeDatesStudent[]>([]);
   const [marks, setMarks] = useState<TypeMarks[]>([]);
   const [middleMarks, setMiddleMarks] = useState<TypeMiddleMarksStudent[]>([]);

@@ -4,6 +4,7 @@ const ROOT_LINK = HTTP + "journal/php/queries/";
 
 const ROOT_LINK_TEACHER = ROOT_LINK + "teacher/";
 const ROOT_LINK_STUDENT = ROOT_LINK + "student/";
+const ROOT_LINK_CLASSROOM_TEACHER = ROOT_LINK + "classroomTeacher/";
 
 export const ROOT_LINK_AUTHORIZATION = ROOT_LINK + "authorization.php";
 
@@ -29,3 +30,11 @@ export const GET_DISCIPLINES_STUDENT =
   ROOT_LINK_STUDENT + "selectDisciplines.php";
 export const GET_MARKS_STUDENT = ROOT_LINK_STUDENT + "selectMarks.php";
 export const GET_MIDDILE_MARKS = ROOT_LINK_STUDENT + "selectMiddleMarks.php";
+
+// КЛАССНЫЙ РУКОВОДИТЕЛЬ -------------------------------------------------------
+export const GET_DISCIPLINES_CLASSROOM_TEACHER =
+  ROOT_LINK_CLASSROOM_TEACHER + "selectDisciplines.php";
+export const GET_STUDENTS_CLASSROOM_TEACHER =
+  ROOT_LINK_CLASSROOM_TEACHER + "selectStudents.php";
+export const GET_MARKS_STUDENTS_CLASSROOM_TEACHER =
+  ROOT_LINK_CLASSROOM_TEACHER + "selectСalculatedInfo.php";

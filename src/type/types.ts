@@ -96,7 +96,7 @@ export type TypeDatesStudent = {
   cur_date: string;
 };
 
-export type TypeDisciplinesStudent = {
+export type TypeDisciplines = {
   discipline_id: number;
   name: string;
 };
@@ -110,4 +110,18 @@ export type TypeMarksStudent = {
 export type TypeMiddleMarksStudent = {
   name: string;
   mark: number;
+};
+
+export type TypeStudentsClassroomTeacher = {
+  student_id: number;
+  name: string;
+  father_name: string;
+  surname: string;
+};
+
+export type TypeInfoStudentsClassroomTeacher = {
+  student_id: number;
+  missing: number;
+  deuces: number;
+  name: string;
 };

@@ -9,7 +9,7 @@ import {
 import dayjs, { Dayjs } from "dayjs";
 import {
   TypeDatesStudent,
-  TypeDisciplinesStudent,
+  TypeDisciplines,
   TypeMarksStudent,
   TypeMiddleMarksStudent,
   TypeScheduleTommorow,
@@ -42,9 +42,9 @@ export const getDates = (
 
 export const getDisciplines = (
   group: number | null
-): Promise<TypeDisciplinesStudent[]> => {
+): Promise<TypeDisciplines[]> => {
   return axios
-    .post<TypeDisciplinesStudent[]>(GET_DISCIPLINES_STUDENT, { group })
+    .post<TypeDisciplines[]>(GET_DISCIPLINES_STUDENT, { group })
     .then((res) => res.data);
 };
 

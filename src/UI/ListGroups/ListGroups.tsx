@@ -45,7 +45,6 @@ const ListGroups: React.FC<TypeSelectItem> = ({ handleChange }) => {
       <StyledTitle>Группа: </StyledTitle>
       <StyledFormControl variant="standard">
         <Select
-          defaultValue={0}
           sx={{ textAlign: "center" }}
           value={group!}
           onChange={handleChange}
